@@ -5,7 +5,7 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/estilos.css">
 	</head>
-	<body onload="init()">
+	<body onload="">
         <br>
 		<header> 
 			<div class="container titulo">
@@ -53,8 +53,8 @@
 					<label class="mr-sm-2" for="Observaciones"> Ingrese las observaciones del instrumento: </label>
 					<input type="text" placeholder="Observaciones" name="Observaciones" id="observations" >
 					<br>	
-					<button class="btn btn-outline-success" type="submit" onclick="validar()"> Guardar </button> &nbsp; &nbsp;
-					<button class="btn btn-outline-danger" type="submit" onclick="reset()"> Cancelar </button>
+					<button class="btn btn-outline-success" onclick="return validar()"> Guardar </button> &nbsp; &nbsp;
+					<button class="btn btn-outline-danger" type="reset"> Cancelar </button>
 				</form>
 			</section>
 		</div>
@@ -63,4 +63,4 @@
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 	</body>
-<html>
+</html>
