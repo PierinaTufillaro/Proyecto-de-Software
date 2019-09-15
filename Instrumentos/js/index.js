@@ -9,6 +9,11 @@ function validar() {
   	 return false
   }
 
+  if (validarSiNumero(id)){
+    alert('El id debe ser un numero')
+    return false
+  }
+
   if(idExistente()){
     alert('El ID ya existe.')
     return false
@@ -41,6 +46,11 @@ function idExistente(){
     }
    }
    return false
+}
+
+function validarSiNumero(numero){
+    if (!/^([0-9])*$/.test(numero))
+      return true
 }
 
 
