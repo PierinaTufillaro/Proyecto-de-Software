@@ -10,7 +10,7 @@ function validar() {
   }
 
   if (validarSiNumero(id)){
-    alert('El id debe ser un numero')
+    alert('El ID debe ser un número.')
     return false
   }
 
