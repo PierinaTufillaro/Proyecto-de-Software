@@ -24,8 +24,7 @@ function validar() {
       return false
   }
 
-  var fila="<tr><td name='id_tabla'>"+id+"</td><td>"+type+"</td><td>"+observations+"</td></tr>";
-
+  var fila="<tr id="+id+"><td name='id_tabla'>"+id+"</td><td>"+type+"</td><td>"+observations+"</td><td>  <a href='#' onclick='remove("+id+"); return false'><i class='fa fa-trash'></i></a></td></tr>";
   var btn = document.createElement("tr");
   btn.innerHTML=fila;
   document.getElementById("table").appendChild(btn);
@@ -53,4 +52,15 @@ function validarSiNumero(numero){
       return true
 }
 
-
+function remove(row){
+  //busco la fila a eliminar a traves del idm cuando la encuentro, la elimino
+  max = document.getElementsByName('id_tabla').length
+  for (var i = 0; i < max; i++) {
+      j = document.getElementsByName('id_tabla')[i].innerText
+      console.log(id)
+      if (j == row) {
+        document.getElementById('table').deleteRow(i+1);
+      }
+  }
+   return false
+}
