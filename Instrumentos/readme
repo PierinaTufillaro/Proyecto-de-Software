@@ -1,0 +1,5 @@
+	Para el estilo de mi pagina utilice bootstrap. Ademas, me ayudo a que sea responsive. Utilice dos veces la clase "col-sm", ubicada en dos
+div distintos. Esta clase se encarga de dividir las columnas en partes iguales cuantas veces sea escrita, en mi caso divide las columnas en dos y por lo tanto quedan dos div de 6 columnas cada uno.
+	Tambien se pueden encontrar la clase "container" utilizada para que se centre el contenido de la pagina.
+	Finalmente, al colocar a mi pagina en el tamaño ancho de limite, es decir, 786px, la pagina se reacomoda haciendo que la tabla que antes se 
+encontraba a la par del formulario, ahora se encuentre debajo del mismo.

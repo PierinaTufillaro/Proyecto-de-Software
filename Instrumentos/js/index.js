@@ -24,7 +24,7 @@ function validar() {
       return false
   }
 
-  var fila="<tr id="+id+"><td name='id_tabla'>"+id+"</td><td>"+type+"</td><td>"+observations+"</td><td>  <a href='#' onclick='remove("+id+"); return false'><i class='fa fa-trash'></i></a></td></tr>";
+  var fila="<tr id="+id+"><td name='id_tabla'>"+id+"</td><td>"+type+"</td><td>"+observations+"</td><td>  <a href='#' onclick='confirmar("+id+"); return false'><i class='fa fa-trash'></i></a></td></tr>";
   var btn = document.createElement("tr");
   btn.innerHTML=fila;
   document.getElementById("table").appendChild(btn);
@@ -60,7 +60,15 @@ function remove(row){
       console.log(id)
       if (j == row) {
         document.getElementById('table').deleteRow(i+1);
+        alert('Se elimino la fila')
       }
   }
    return false
+}
+
+function confirmar(row){
+  if (confirm("Desea eliminar el elemento?"))
+    return remove(row)
+  else
+    return false
 }
